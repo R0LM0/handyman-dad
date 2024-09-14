@@ -1,7 +1,7 @@
-// src/app/login/page.jsx
 "use client";
 
 import { useState } from 'react';
+import Link from 'next/link'; // Importar el componente Link
 
 export default function LoginPage() {
     const [email, setEmail] = useState('');
@@ -83,6 +83,16 @@ export default function LoginPage() {
                         {loading ? 'Iniciando sesión...' : 'Iniciar sesión'}
                     </button>
                 </form>
+
+                {/* Agrega el enlace de registro aquí */}
+                <div className="text-center mt-4">
+                    <p className="text-sm text-[var(--foreground)]">
+                        ¿No tienes una cuenta?{' '}
+                        <Link href="/register"
+                            className="text-[var(--primary)] hover:underline">Regístrate aquí
+                        </Link>
+                    </p>
+                </div>
             </div>
         </div>
     );

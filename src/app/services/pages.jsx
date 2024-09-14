@@ -57,7 +57,7 @@ export default function ServicesLandingPage() {
                         />
                         <h2 className="text-3xl md:text-4xl font-bold mb-4 font-mono">Bienvenido a mi mundo de reparaciones</h2>
                         <p className="text-lg md:text-xl max-w-2xl mx-auto">
-                            Soy Juan Osorio, tu experto de confianza en mejoras del hogar. Con más de 15 años de experiencia, me especializo en hacer realidad tus proyectos de reparación y renovación para mantener tu casa en perfectas condiciones.
+                            Soy Juan Osorio, tu experto de confianza en mejoras del hogar. Con más de 33 años de experiencia, me especializo en hacer realidad tus proyectos de reparación y renovación para mantener tu casa en perfectas condiciones.
                         </p>
                     </div>
                 </section>
@@ -95,15 +95,16 @@ export default function ServicesLandingPage() {
                     <div className="container mx-auto px-4">
                         <h2 className="text-3xl font-bold text-center mb-12 font-mono">Mis Trabajos</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            <PortfolioItem src="/placeholder.svg?height=300&width=400" alt="Proyecto de carpintería" />
-                            <PortfolioItem src="/placeholder.svg?height=300&width=400" alt="Remodelación de baño" />
-                            <PortfolioItem src="/placeholder.svg?height=300&width=400" alt="Pintura de interiores" />
-                            <PortfolioItem src="/placeholder.svg?height=300&width=400" alt="Reparación de fontanería" />
-                            <PortfolioItem src="/placeholder.svg?height=300&width=400" alt="Instalación de pisos" />
-                            <PortfolioItem src="/placeholder.svg?height=300&width=400" alt="Renovación de cocina" />
+                            <PortfolioItem src="/placeholder.svg" alt="Proyecto de carpintería" />
+                            <PortfolioItem src="/placeholder.svg" alt="Remodelación de baño" />
+                            <PortfolioItem src="/placeholder.svg" alt="Pintura de interiores" />
+                            <PortfolioItem src="/placeholder.svg" alt="Reparación de fontanería" />
+                            <PortfolioItem src="/placeholder.svg" alt="Instalación de pisos" />
+                            <PortfolioItem src="/placeholder.svg" alt="Renovación de cocina" />
                         </div>
                     </div>
                 </section>
+
 
                 <section id="contact" className="py-20 bg-secondary/10">
                     <div className="container mx-auto max-w-md px-4">
