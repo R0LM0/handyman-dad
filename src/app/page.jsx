@@ -4,7 +4,7 @@
 import { useEffect, useState } from 'react';
 import PublicLayout from '../components/layouts/PublicLayout';
 import PrivateLayout from '../components/layouts/PrivateLayout';
-import HandymanLandingPage from './handyman/pages'; // Importar la página de Handyman
+import ServicesLandingPage from './services/pages'; // Importar la página de Handyman
 import cookie from 'js-cookie'; // Usaremos js-cookie para leer las cookies en el cliente
 
 export default function Home() {
@@ -38,7 +38,7 @@ export default function Home() {
   ) : (
     <PublicLayout>
       {/* Página pública */}
-      <HandymanLandingPage /> {/* Aquí se cargará la página principal de Handyman */}
+      <ServicesLandingPage /> {/* Aquí se cargará la página principal de Handyman */}
     </PublicLayout>
   );
 }
