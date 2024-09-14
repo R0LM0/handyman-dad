@@ -9,7 +9,7 @@ export default function PublicLayout({ children }) {
             {/* Footer, separado del contenedor principal */}
             <footer className="bg-primary text-background py-4 w-full">
                 <div className="w-full text-center">
-                    <p>&copy; {new Date().getFullYear()} Juan el Handyman. Todos los derechos reservados.</p>
+                    <p>&copy; {new Date().getFullYear()} Servicios Osorio. Todos los derechos reservados.</p>
                 </div>
             </footer>
         </div>
