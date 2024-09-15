@@ -12,15 +12,15 @@ export default function Home() {
   const [loading, setLoading] = useState(true); // Para manejar el estado de carga
 
   useEffect(() => {
-    // Verificamos si la cookie de autenticación existe
-    const token = cookie.get('token');
+    // // Verificamos si la cookie de autenticación existe
+    // const token = cookie.get('token');
 
-    if (token) {
-      setIsAuthenticated(true);
-    } else {
-      setIsAuthenticated(false);
-    }
-
+    // if (token) {
+    //   setIsAuthenticated(true);
+    // } else {
+    //   setIsAuthenticated(false);
+    // }
+    setIsAuthenticated(false)
     setLoading(false); // Finalizamos la carga
   }, []);
 
