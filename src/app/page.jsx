@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import PublicLayout from '../components/layouts/PublicLayout';
 import PrivateLayout from '../components/layouts/PrivateLayout';
 import ServicesLandingPage from './services/pages'; // Importar la página de Handyman
-import cookie from 'js-cookie'; // Usaremos js-cookie para leer las cookies en el cliente
+// import cookie from 'js-cookie'; // Usaremos js-cookie para leer las cookies en el cliente
 
 export default function Home() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -24,9 +24,9 @@ export default function Home() {
     setLoading(false); // Finalizamos la carga
   }, []);
 
-  if (loading) {
-    return <div>Cargando...</div>; // Mostrar pantalla de carga mientras verificamos la autenticación
-  }
+  // if (loading) {
+  //   return <div>Cargando...</div>; // Mostrar pantalla de carga mientras verificamos la autenticación
+  // }
 
   return isAuthenticated ? (
     <PrivateLayout>
