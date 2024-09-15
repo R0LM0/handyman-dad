@@ -5,6 +5,10 @@ import { useState, useEffect } from 'react'
 import { Hammer, Wrench, Paintbrush, Building2 } from "lucide-react"
 import Link from "next/link"
 import perfil from "../../assets/perfil.jpg"
+import ServiceCard from "@/components/ServiceCard"
+import Whatsapp from "@/components/Whatsapp"
+import PortfolioSection from "@/components/PortfolioSection"
+
 
 export default function ServicesLandingPage() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -39,7 +43,7 @@ export default function ServicesLandingPage() {
                             <li><a href="#about" className="hover:underline">Sobre mí</a></li>
                             <li><a href="#services" className="hover:underline">Servicios</a></li>
                             <li><a href="#portfolio" className="hover:underline">Trabajos</a></li>
-                            <li><Link href="/login" className="hover:underline">Login</Link></li>
+                            {/* <li><Link href="/login" className="hover:underline">Login</Link></li> */}
                         </ul>
                     </nav>
                 </div>
@@ -91,67 +95,14 @@ export default function ServicesLandingPage() {
                 </section>
 
 
-                <section id="portfolio" className="py-20">
-                    <div className="container mx-auto px-4">
-                        <h2 className="text-3xl font-bold text-center mb-12 font-mono">Mis Trabajos</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            <PortfolioItem src="/placeholder.svg" alt="Proyecto de carpintería" />
-                            <PortfolioItem src="/placeholder.svg" alt="Remodelación de baño" />
-                            <PortfolioItem src="/placeholder.svg" alt="Pintura de interiores" />
-                            <PortfolioItem src="/placeholder.svg" alt="Reparación de fontanería" />
-                            <PortfolioItem src="/placeholder.svg" alt="Instalación de pisos" />
-                            <PortfolioItem src="/placeholder.svg" alt="Renovación de cocina" />
-                        </div>
-                    </div>
-                </section>
+                <PortfolioSection />
 
 
-                <section id="contact" className="py-20 bg-secondary/10">
-                    <div className="container mx-auto max-w-md px-4">
-                        <h2 className="text-3xl font-bold text-center mb-8 font-mono">Contáctame</h2>
-                        <form className="space-y-4">
-                            <div>
-                                <label htmlFor="name" className="block text-sm font-medium">Nombre</label>
-                                <input type="text" id="name" name="name" className="mt-1 block w-full px-3 py-2 bg-background border border-secondary rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary" />
-                            </div>
-                            <div>
-                                <label htmlFor="email" className="block text-sm font-medium">Email</label>
-                                <input type="email" id="email" name="email" className="mt-1 block w-full px-3 py-2 bg-background border border-secondary rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary" />
-                            </div>
-                            <div>
-                                <label htmlFor="phone" className="block text-sm font-medium">Teléfono</label>
-                                <input type="tel" id="phone" name="phone" className="mt-1 block w-full px-3 py-2 bg-background border border-secondary rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary" />
-                            </div>
-                            <div>
-                                <label htmlFor="message" className="block text-sm font-medium">Mensaje</label>
-                                <textarea id="message" name="message" rows="4" className="mt-1 block w-full px-3 py-2 bg-background border border-secondary rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary"></textarea>
-                            </div>
-                            <button type="submit" className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-background bg-primary hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
-                                Enviar Mensaje
-                            </button>
-                        </form>
-                    </div>
-                </section>
+
+                <Whatsapp />
             </main>
 
         </div>
     )
 }
 
-function ServiceCard({ icon, title, description }) {
-    return (
-        <div className="bg-background border border-secondary hover:shadow-md transition-shadow duration-300 p-6 rounded-lg">
-            <div className="mb-4 text-primary flex justify-center">{icon}</div>
-            <h3 className="text-lg md:text-xl font-semibold mb-2 font-mono">{title}</h3>
-            <p className="text-sm md:text-base text-foreground/80 break-words">{description}</p>
-        </div>
-    )
-}
-
-function PortfolioItem({ src, alt }) {
-    return (
-        <div className="overflow-hidden rounded-lg shadow-md border border-secondary">
-            <Image src={src} alt={alt} width={400} height={300} className="w-full h-auto object-cover" />
-        </div>
-    )
-}
