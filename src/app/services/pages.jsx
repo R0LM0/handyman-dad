@@ -100,6 +100,8 @@ export default function ServicesLandingPage() {
 
 
                 <Whatsapp />
+
+                {/* <a href="https://www.flaticon.es/iconos-gratis/caja-de-herramientas" title="caja-de-herramientas iconos">Caja-de-herramientas iconos creados por Smashicons - Flaticon</a> */}
             </main>
 
         </div>
