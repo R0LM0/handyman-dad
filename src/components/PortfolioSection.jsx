@@ -10,7 +10,7 @@ import P2 from '../assets/Pintura/P2.jpg';
 import P3 from '../assets/Pintura/P3.jpg';
 import P4 from '../assets/Pintura/P4.jpg';
 import R1 from '../assets/Remodelacion/R1.jpg';
-import Modal from './Modal';
+import Modal from './Modal'; // Importaremos el componente Modal que crearemos
 
 const trabajos = [
     { src: L1, alt: 'Lavado a presión - Trabajo 1' },
@@ -42,7 +42,7 @@ export default function PortfolioSection() {
         <section id="portfolio" className="py-20">
             <div className="container mx-auto px-4">
                 <h2 className="text-3xl font-bold text-center mb-12 font-mono">Mis Trabajos</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {trabajos.map((trabajo, index) => (
                         <PortfolioItem
                             key={index}
