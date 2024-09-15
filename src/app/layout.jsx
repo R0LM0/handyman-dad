@@ -2,7 +2,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Servicios Osorios",
+  title: "Servicios Osorio",
   description: "Juan Osorio",
 };
 
