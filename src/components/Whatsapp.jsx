@@ -8,7 +8,7 @@ export default function Whatsapp() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const adminPhoneNumber = process.env.NEXT_PUBLIC_PHONE_NUMBER || '+50575096841'; // Usa la variable de entorno o un valor por defecto
+        const adminPhoneNumber = process.env.NEXT_PUBLIC_PHONE_NUMBER || '+17862875239'; // Usa la variable de entorno o un valor por defecto
         const whatsappURL = `https://wa.me/${adminPhoneNumber}?text=Nombre:%20${encodeURIComponent(name)}%0ATeléfono:%20${encodeURIComponent(phone)}%0AMensaje:%20${encodeURIComponent(message)}`;
 
         // Redirigir a la URL de WhatsApp
