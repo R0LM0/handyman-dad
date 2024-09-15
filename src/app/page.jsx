@@ -11,34 +11,39 @@ export default function Home() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [loading, setLoading] = useState(true); // Para manejar el estado de carga
 
-  useEffect(() => {
-    // // Verificamos si la cookie de autenticación existe
-    // const token = cookie.get('token');
+  // useEffect(() => {
+  //   // // Verificamos si la cookie de autenticación existe
+  //   // const token = cookie.get('token');
 
-    // if (token) {
-    //   setIsAuthenticated(true);
-    // } else {
-    //   setIsAuthenticated(false);
-    // }
-    setIsAuthenticated(false)
-    setLoading(false); // Finalizamos la carga
-  }, []);
+  //   // if (token) {
+  //   //   setIsAuthenticated(true);
+  //   // } else {
+  //   //   setIsAuthenticated(false);
+  //   // }
+  //   setIsAuthenticated(false)
+  //   setLoading(false); // Finalizamos la carga
+  // }, []);
 
   // if (loading) {
   //   return <div>Cargando...</div>; // Mostrar pantalla de carga mientras verificamos la autenticación
   // }
 
-  return isAuthenticated ? (
-    <PrivateLayout>
-      {/* Contenido privado aquí */}
-      <div>
-        <h2>Bienvenido al dashboard</h2>
-      </div>
-    </PrivateLayout>
-  ) : (
+  // return isAuthenticated ? (
+  //   <PrivateLayout>
+  //     {/* Contenido privado aquí */}
+  //     <div>
+  //       <h2>Bienvenido al dashboard</h2>
+  //     </div>
+  //   </PrivateLayout>
+  // ) : (
+  //   <PublicLayout>
+  //     {/* Página pública */}
+  //     <ServicesLandingPage /> {/* Aquí se cargará la página principal de Handyman */}
+  //   </PublicLayout>
+  // );
+  return (
     <PublicLayout>
-      {/* Página pública */}
-      <ServicesLandingPage /> {/* Aquí se cargará la página principal de Handyman */}
+      <ServicesLandingPage />
     </PublicLayout>
   );
 }
