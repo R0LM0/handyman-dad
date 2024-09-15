@@ -1,3 +1,5 @@
+'use client';
+
 // src/components/layouts/PrivateLayout.js
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
